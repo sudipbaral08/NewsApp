@@ -27,9 +27,8 @@ const News = () => {
   useEffect(() => {
     setIsLoading(true);
     apiClient
-      .get("top-headlines", {
+      .get("/news", {
         params: {
-          apiKey,
           q: searchQuery,
           country: "in",
           category,

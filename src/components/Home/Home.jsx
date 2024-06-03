@@ -28,9 +28,8 @@ const Home = () => {
 
   const fetchNews = async (category) => {
     try {
-      const response = await apiClient.get("top-headlines", {
+      const response = await apiClient.get("/news", {
         params: {
-          apiKey,
           country: "in",
           category,
         },
